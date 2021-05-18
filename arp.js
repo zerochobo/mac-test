@@ -5,17 +5,17 @@ const requestIP = require('request-ip');
 
 const server = express();
 
-network.get_gateway_ip(function(err,ip)
-{
-    console.log("Server Gateway : " + (err||ip));
-    arp.getMAC(ip, function(err, mac){
-        if(err){
-            console.log('Application is not work!');
-        }else{
-        console.log("MAC Address : " + mac);
-        }
-    });
-});
+// network.get_gateway_ip(function(err,ip)
+// {
+//     console.log("Server Gateway : " + (err||ip));
+//     arp.getMAC(ip, function(err, mac){
+//         if(err){
+//             console.log('Application is not work!');
+//         }else{
+//         console.log("MAC Address : " + mac);
+//         }
+//     });
+// });
 
 server.get('/', function(req, res){
     res.send('main page')
